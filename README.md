@@ -54,6 +54,7 @@ source="WinEventLog:Security" EventCode=4625
 | `-` | 3 | No network address recorded |
 | `127.0.0.1` | 3 | IPv4 loopback address |
 | `::1` | 3 | IPv6 loopback address |
+
 No external or remote IP address appeared in the results.
 ## Logon-Type Analysis
 ```spl
