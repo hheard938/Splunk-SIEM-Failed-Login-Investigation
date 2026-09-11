@@ -125,6 +125,14 @@ Escalate the incident when one or more of the following conditions exist:
 ## Evidence
 ### Failed Logins by Target Account
 ![Splunk failed logins by account](splunk-failed-logins-by-account.png)
+
+### Simulated Detection Threshold Test
+Tested the detection logic using synthetic events generated with `makeresults`:
+- **5 events:** Returned one matching row with a count of 5.
+- **4 events:** Returned no matching rows, as expected.
+These tests validate the count threshold using simulated data. They do not test Windows log ingestion or scheduled alert delivery.
+![Simulated failed-login threshold test showing five events](splunk-simulated-threshold-test.png)
+
 ## SOC Analysis and Disposition
 - **Detection:** True positive — failed-login events occurred
 - **Severity:** Informational/Low
